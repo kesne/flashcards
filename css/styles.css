@@ -38,19 +38,6 @@ body {
   padding: 14px 10px 0px 10px;
   text-indent: 20px;
 }
-/* .flashcard-reveal h3 {
-  font-family: cursive;
-  font-size: 40px;
-  margin: 0px;
-  padding: 0px;
-  padding-top: 5px;
-  margin: 0px;
-}
-
-.flashcard-reveal p {
-  margin-top: 10px;
-  margin: 0px 20px 0px 20px;
-} */
 
 .flashcard-reveal {
   display: none;
