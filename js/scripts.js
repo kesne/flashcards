@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
   $(".flashcard").click(function() {
-    $(".flashcard-initial", this).fadeToggle();
-    $(".flashcard-reveal", this).fadeToggle();
+    $(".flashcard-initial", this).toggle("fast");
+    $(".flashcard-reveal", this).toggle("fast");
+    $(this).toggleClass("active");
   });
 
 });

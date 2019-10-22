@@ -1,33 +1,56 @@
+body {
+  background-color: rgba(220, 211, 182, .30)
+}
+
 .flashcard {
-  background-color: rgba(220, 211, 182, .15);
   height: 270px;
-  margin: 15px 0;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 1);
+}
+.active {
+  background-image: url("../img/cardback.png");
+  background-size: 100%;
+}
+
+.flashcard h3 {
+  font-family: cursive;
+  font-style: italic;
+}
+
+.flashcard-initial h3 {
+  line-height: 270px;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: 50px;
 }
 
 .flashcard-reveal h3 {
+  padding-left: 10px;
+  padding-top: 15px;
+  font-size: 40px;
+}
+.flashcard-reveal p {
+  line-height: 27px;
+  font-size: 18px;
+  padding-top: 15px;
+  padding: 14px 10px 0px 10px;
+  text-indent: 20px;
+}
+/* .flashcard-reveal h3 {
   font-family: cursive;
   font-size: 40px;
   margin: 0px;
   padding: 0px;
   padding-top: 5px;
   margin: 0px;
-  border-bottom: 2px solid rgba(255, 102, 102, 0.8);
 }
 
 .flashcard-reveal p {
-
   margin-top: 10px;
-  border-bottom: 2px solid rgba(255, 102, 102, 0.6);
   margin: 0px 20px 0px 20px;
-}
-
-.red {
-  background-color: red;
-}
-
-.hidden {
-  display: none;
-}
+} */
 
 .flashcard-reveal {
   display: none;
