@@ -1,13 +1,8 @@
-$(document).ready(function(){
-
-  $(".flashcard").click(function() {
-    $(this).children(".flashcard-initial").toggle("fast");
-    $(this).children(".flashcard-reveal").toggle("fast");
-    $(this).toggleClass("active");
-  });
-
+$(document).ready(() => {
+    $('.flashcard').click(function(e) {
+        $(e.currentTarget).toggleClass('is-flipped');
+    });
 });
-
 
 // This is the difficult way to do it (these lines for every single card)
 

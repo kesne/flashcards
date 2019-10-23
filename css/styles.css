@@ -1,44 +1,70 @@
 body {
-  background-color: rgba(220, 211, 182, .30)
-}
-
-.flashcard {
-  height: 270px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-  background-color: rgba(255, 255, 255, 1);
-}
-.active {
-  background-image: url("../img/cardback.png");
-  background-size: 100%;
+    background-color: rgba(220, 211, 182, 0.3);
 }
 
 .flashcard h3 {
-  font-family: cursive;
-  font-style: italic;
+    font-family: cursive;
+    font-style: italic;
 }
 
-.flashcard-initial h3 {
-  line-height: 270px;
-  margin: 0px;
-  padding: 0px;
-  text-align: center;
-  font-size: 50px;
+.scene {
+    height: 270px;
+    margin: 40px 0;
+    perspective: 1500px;
 }
 
-.flashcard-reveal h3 {
-  padding-left: 10px;
-  padding-top: 15px;
-  font-size: 40px;
-}
-.flashcard-reveal p {
-  line-height: 27px;
-  font-size: 18px;
-  padding-top: 15px;
-  padding: 14px 10px 0px 10px;
-  text-indent: 20px;
+.flashcard {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
 }
 
-.flashcard-reveal {
-  display: none;
+.flashcard.is-flipped {
+    transform: rotateX(180deg);
+}
+
+.flashcard__face {
+    position: absolute;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard__face--front {
+    background: white;
+}
+
+.flashcard__face--front h3 {
+    line-height: 270px;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.flashcard__face--back {
+    background-image: url('../img/cardback.png');
+    background-size: 100%;
+    text-align: left;
+    transform: rotateX(180deg);
+}
+
+.flashcard__face--back h3 {
+    padding-left: 20px;
+    padding-top: 15px;
+    font-size: 40px;
+}
+
+.flashcard__face--back p {
+    line-height: 27px;
+    font-size: 18px;
+    padding-top: 15px;
+    padding: 14px 10px 0px 10px;
+    text-indent: 20px;
 }
